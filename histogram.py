@@ -20,6 +20,7 @@ plt.xlabel('Height (in)')
 # Draw the vertical line at the mean
 plt.axvline(males['Height'].mean(), color='blue', linewidth=2)
 plt.axvline(females['Height'].mean(), color='red', linewidth=2)
+plt.show()
 
 #
 # Histogram 2
@@ -29,4 +30,11 @@ males['Height'].plot(kind='hist', bins=200, range=(50,80), color='blue', alpha=0
 females['Height'].plot(kind='hist', bins=200, range=(50,80), color='red', alpha=0.3,
                      cumulative=True, normed=True)
 
+plt.title('Height distribution')
+plt.legend(['Male', 'Female'])
+plt.xlabel('Height (in)')
+
+plt.axhline(0.8)
+plt.axhline(0.5)
+plt.axhline(0.2)
 plt.show()
